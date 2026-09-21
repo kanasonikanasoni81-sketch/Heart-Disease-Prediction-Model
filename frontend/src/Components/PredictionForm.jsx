@@ -142,7 +142,7 @@ const handleSubmit = async (e) => {
           <InputField
             label="Resting Blood Pressure"
             value={restingBP}
-            onChange={(value) => setRestingBP(Number(value))}
+            onChange={(value) => setRestingBP(value === "" ? "" : Number(value))}
             min={80}
             max={200}
             unit="mm Hg"
@@ -151,7 +151,7 @@ const handleSubmit = async (e) => {
           <InputField
             label="Cholesterol"
             value={cholesterol}
-            onChange={(value) => setCholesterol(Number(value))}
+            onChange={(value) => setCholesterol(value === "" ? "" : Number(value))}
             min={100}
             max={600}
             unit="mg/dL"
